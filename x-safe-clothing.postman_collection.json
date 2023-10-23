@@ -1,0 +1,1145 @@
+{
+	"info": {
+		"_postman_id": "e3621636-e328-4fe6-a49b-457464084fef",
+		"name": "x-safe-clothing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28473639"
+	},
+	"item": [
+		{
+			"name": "endpoints",
+			"item": [
+				{
+					"name": "end1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzYXJhNzgiLCJqdGkiOiI0ODMzYzdlNy0wY2JkLTQzNWItYWJmNy05M2QwMzMyOWJhYzMiLCJlbWFpbCI6InNhcmFAZ21haWwuY29tIiwidWlkIjoiMiIsInJvbGVzIjoiQWRtaW5pc3RyYXRvciIsImV4cCI6MTY5NTgzMjk5NCwiaXNzIjoiTXlTdG9yZUFwaSIsImF1ZCI6Ik15U3RvcmVBcGlVc2VyIn0.VDbJe720WliuJMK3apsth6yz8sJoxRS4J-0k5zkEE0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Proveedor/natural",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Proveedor",
+								"natural"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "end2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzYXJhNzgiLCJqdGkiOiI0ODMzYzdlNy0wY2JkLTQzNWItYWJmNy05M2QwMzMyOWJhYzMiLCJlbWFpbCI6InNhcmFAZ21haWwuY29tIiwidWlkIjoiMiIsInJvbGVzIjoiQWRtaW5pc3RyYXRvciIsImV4cCI6MTY5NTgzMjk5NCwiaXNzIjoiTXlTdG9yZUFwaSIsImF1ZCI6Ik15U3RvcmVBcGlVc2VyIn0.VDbJe720WliuJMK3apsth6yz8sJoxRS4J-0k5zkEE0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Orden/prendasXorden/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Orden",
+								"prendasXorden",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "end3",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzYXJhNzgiLCJqdGkiOiI0ODMzYzdlNy0wY2JkLTQzNWItYWJmNy05M2QwMzMyOWJhYzMiLCJlbWFpbCI6InNhcmFAZ21haWwuY29tIiwidWlkIjoiMiIsInJvbGVzIjoiQWRtaW5pc3RyYXRvciIsImV4cCI6MTY5NTgzMjk5NCwiaXNzIjoiTXlTdG9yZUFwaSIsImF1ZCI6Ik15U3RvcmVBcGlVc2VyIn0.VDbJe720WliuJMK3apsth6yz8sJoxRS4J-0k5zkEE0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Prenda/prendasProteccion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Prenda",
+								"prendasProteccion"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "token",
+			"item": [
+				{
+					"name": "register-user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Email\":  \"pedro@gmail.com\",\r\n  \"Password\":\"123*\",\r\n  \"IdenNumber\": \"888\",\r\n  \"UserName\": \"pedro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/User/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"User",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Username\": \"hugo33\",\r\n  \"password\": \"123*\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/User/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"User",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add-role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\":\"diana55\",\r\n  \"password\": \"123*\",\r\n  \"role\" : \"Administrator\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/User/addrole",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"User",
+								"addrole"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/User/refresh-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"User",
+								"refresh-token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/User?ver=1.1&search=333",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"User"
+							],
+							"query": [
+								{
+									"key": "ver",
+									"value": "1.1"
+								},
+								{
+									"key": "search",
+									"value": "333",
+									"description": "Busqueda por IdenNumber!"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/User/usersWithRoles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"User",
+								"usersWithRoles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "proveedor",
+			"item": [
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Nombre\": \"Jesus Pérez\",\n  \"NitProveedor\":\"333\",\n  \"TipoPersonaId\": 1,\n  \"MunicipioId\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Proveedor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Proveedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\" : 3,\n    \"Nombre\": \"Fabio Pérez\",\n    \"NitProveedor\":\"333\",\n    \"TipoPersonaId\": 1,\n    \"MunicipioId\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Proveedor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Proveedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJodWdvMzMiLCJqdGkiOiJkMGY1NWE4Yi02YmJkLTRkMjMtOTg5OS0yMTBjYTczODdhNzAiLCJlbWFpbCI6Imh1Z29AZ21haWwuY29tIiwidWlkIjoiMyIsInJvbGVzIjoiRW1wbG95ZWUiLCJleHAiOjE2OTc4NTYxODMsImlzcyI6Ik15U3RvcmVBcGkiLCJhdWQiOiJNeVN0b3JlQXBpVXNlciJ9.cMiozKY69Etm0UUzV-T6atYlhRx_BV_Hk2LXVyTt424",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Proveedor/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Proveedor",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzYXJhNzgiLCJqdGkiOiI0ODMzYzdlNy0wY2JkLTQzNWItYWJmNy05M2QwMzMyOWJhYzMiLCJlbWFpbCI6InNhcmFAZ21haWwuY29tIiwidWlkIjoiMiIsInJvbGVzIjoiQWRtaW5pc3RyYXRvciIsImV4cCI6MTY5NTgzMjk5NCwiaXNzIjoiTXlTdG9yZUFwaSIsImF1ZCI6Ik15U3RvcmVBcGlVc2VyIn0.VDbJe720WliuJMK3apsth6yz8sJoxRS4J-0k5zkEE0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Proveedor?ver=1.1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Proveedor"
+							],
+							"query": [
+								{
+									"key": "ver",
+									"value": "1.1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cliente",
+			"item": [
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Nombre\": \"Fabiola Castro\",\n  \"IdCliente\":\"125\",\n  \"TipoPersonaId\": 1,\n  \"MunicipioId\": 2,\n  \"FechaRegistro\": \"2023-10-05\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\" : 3,\n    \"Nombre\": \"Fabiola Torres\",\n  \"IdCliente\":\"125\",\n  \"TipoPersonaId\": 1,\n  \"MunicipioId\": 2,\n  \"FechaRegistro\": \"2023-10-05\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Cliente",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Cliente/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Cliente",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzYXJhNzgiLCJqdGkiOiI0ODMzYzdlNy0wY2JkLTQzNWItYWJmNy05M2QwMzMyOWJhYzMiLCJlbWFpbCI6InNhcmFAZ21haWwuY29tIiwidWlkIjoiMiIsInJvbGVzIjoiQWRtaW5pc3RyYXRvciIsImV4cCI6MTY5NTgzMjk5NCwiaXNzIjoiTXlTdG9yZUFwaSIsImF1ZCI6Ik15U3RvcmVBcGlVc2VyIn0.VDbJe720WliuJMK3apsth6yz8sJoxRS4J-0k5zkEE0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Cliente?ver=1.1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Cliente"
+							],
+							"query": [
+								{
+									"key": "ver",
+									"value": "1.1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "empleado",
+			"item": [
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Nombre\": \"Ramon Ortiz\",\n  \"IdEmp\":\"133\",\n  \"CargoId\": 1,\n  \"MunicipioId\": 3,\n  \"FechaIngreso\": \"2023-10-05\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Empleado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Empleado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\" : 3,\n    \"Nombre\": \"Ramon Gomez\",\n  \"IdEmp\":\"133\",\n  \"CargoId\": 1,\n  \"MunicipioId\": 3,\n  \"FechaIngreso\": \"2023-10-05\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Empleado",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Empleado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Empleado/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Empleado",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzYXJhNzgiLCJqdGkiOiI0ODMzYzdlNy0wY2JkLTQzNWItYWJmNy05M2QwMzMyOWJhYzMiLCJlbWFpbCI6InNhcmFAZ21haWwuY29tIiwidWlkIjoiMiIsInJvbGVzIjoiQWRtaW5pc3RyYXRvciIsImV4cCI6MTY5NTgzMjk5NCwiaXNzIjoiTXlTdG9yZUFwaSIsImF1ZCI6Ik15U3RvcmVBcGlVc2VyIn0.VDbJe720WliuJMK3apsth6yz8sJoxRS4J-0k5zkEE0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Empleado?ver=1.1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Empleado"
+							],
+							"query": [
+								{
+									"key": "ver",
+									"value": "1.1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orden",
+			"item": [
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"EstadoId\":2,\n  \"ClienteId\": 2,\n  \"EmpleadoId\": 3,\n  \"Fecha\": \"2023-10-17\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Orden",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Orden"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\" : 3,\n    \"EstadoId\":2,\n  \"ClienteId\": 2,\n  \"EmpleadoId\": 3,\n  \"Fecha\": \"2023-10-20\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Orden",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Orden"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Empleado/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Empleado",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzYXJhNzgiLCJqdGkiOiI0ODMzYzdlNy0wY2JkLTQzNWItYWJmNy05M2QwMzMyOWJhYzMiLCJlbWFpbCI6InNhcmFAZ21haWwuY29tIiwidWlkIjoiMiIsInJvbGVzIjoiQWRtaW5pc3RyYXRvciIsImV4cCI6MTY5NTgzMjk5NCwiaXNzIjoiTXlTdG9yZUFwaSIsImF1ZCI6Ik15U3RvcmVBcGlVc2VyIn0.VDbJe720WliuJMK3apsth6yz8sJoxRS4J-0k5zkEE0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Orden?ver=1.1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Orden"
+							],
+							"query": [
+								{
+									"key": "ver",
+									"value": "1.1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Venta",
+			"item": [
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"EmpleadoId\":1,\n  \"ClienteId\": 2,\n  \"FormaPagoId\": 2,\n  \"Fecha\": \"2023-10-17\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Venta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Venta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\" : 3,\n    \"EstadoId\":2,\n  \"ClienteId\": 2,\n  \"EmpleadoId\": 3,\n  \"Fecha\": \"2023-10-20\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Venta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Venta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Venta/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Venta",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzYXJhNzgiLCJqdGkiOiI0ODMzYzdlNy0wY2JkLTQzNWItYWJmNy05M2QwMzMyOWJhYzMiLCJlbWFpbCI6InNhcmFAZ21haWwuY29tIiwidWlkIjoiMiIsInJvbGVzIjoiQWRtaW5pc3RyYXRvciIsImV4cCI6MTY5NTgzMjk5NCwiaXNzIjoiTXlTdG9yZUFwaSIsImF1ZCI6Ik15U3RvcmVBcGlVc2VyIn0.VDbJe720WliuJMK3apsth6yz8sJoxRS4J-0k5zkEE0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Venta?ver=1.1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Venta"
+							],
+							"query": [
+								{
+									"key": "ver",
+									"value": "1.1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "detalleOrden",
+			"item": [
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"OrdenId\":1,\n  \"PrendaId\": 3,\n  \"ColorId\": 2,\n  \"CantidadProducida\": 15\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/DetalleOrden",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"DetalleOrden"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\" : 3,\n    \"OrdenId\":2,\n  \"PrendaId\": 1,\n  \"ColorId\": 2,\n  \"CantidadProducida\": 20\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/DetalleOrden",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"DetalleOrden"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/DetalleOrden/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"DetalleOrden",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzYXJhNzgiLCJqdGkiOiI0ODMzYzdlNy0wY2JkLTQzNWItYWJmNy05M2QwMzMyOWJhYzMiLCJlbWFpbCI6InNhcmFAZ21haWwuY29tIiwidWlkIjoiMiIsInJvbGVzIjoiQWRtaW5pc3RyYXRvciIsImV4cCI6MTY5NTgzMjk5NCwiaXNzIjoiTXlTdG9yZUFwaSIsImF1ZCI6Ik15U3RvcmVBcGlVc2VyIn0.VDbJe720WliuJMK3apsth6yz8sJoxRS4J-0k5zkEE0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/DetalleOrden?ver=1.1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"DetalleOrden"
+							],
+							"query": [
+								{
+									"key": "ver",
+									"value": "1.1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "prenda",
+			"item": [
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"IdPrenda\": 1011,\n    \"Nombre\":\"Pantalon\",\n    \"ValorUnitCOP\": 80000,\n    \"ValorUnitUSD\": 20,\n    \"EstadoId\": 1,\n    \"TipoProteccionId\":2,\n    \"GeneroId\":3\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Prenda",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Prenda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Id\" : 4,\n    \"IdPrenda\": 1012,\n    \"Nombre\":\"Pantalon\",\n    \"ValorUnitCOP\": 20000,\n    \"ValorUnitUSD\": 5,\n    \"EstadoId\": 1,\n    \"TipoProteccionId\":1,\n    \"GeneroId\":2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/Prenda",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Prenda"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Prenda/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Prenda",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzYXJhNzgiLCJqdGkiOiI0ODMzYzdlNy0wY2JkLTQzNWItYWJmNy05M2QwMzMyOWJhYzMiLCJlbWFpbCI6InNhcmFAZ21haWwuY29tIiwidWlkIjoiMiIsInJvbGVzIjoiQWRtaW5pc3RyYXRvciIsImV4cCI6MTY5NTgzMjk5NCwiaXNzIjoiTXlTdG9yZUFwaSIsImF1ZCI6Ik15U3RvcmVBcGlVc2VyIn0.VDbJe720WliuJMK3apsth6yz8sJoxRS4J-0k5zkEE0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/Prenda",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"Prenda"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

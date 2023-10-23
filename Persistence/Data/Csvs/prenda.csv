@@ -1,0 +1,5 @@
+Id,IdPrenda,Nombre,ValorUnitCOP,ValorUnitUSD,EstadoId,TipoProteccionId,GeneroId
+1,1010,Camisa,20000,5,1,1,1
+3,1011,Pantalon,80000,20,1,2,3
+4,1012,Pantalon,20000,5,1,1,2
+5,1013,Chaleco,90000,25,2,1,1

@@ -1,0 +1,4 @@
+Id,IdCliente,Nombre,TipoPersonaId,FechaRegistro,MunicipioId
+1,123,"Marta Cabrera",1,"2023-10-02 00:00:00.000000",2
+2,124,"Hugo Díaz",1,"2023-10-05 00:00:00.000000",2
+3,125,"Fabiola Torres",1,"2023-10-05 00:00:00.000000",2

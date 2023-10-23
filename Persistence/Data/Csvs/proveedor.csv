@@ -1,0 +1,6 @@
+Id,NitProveedor,Nombre,TipoPersonaId,MunicipioId
+1,111,"Diana Ochoa",1,1
+2,222,"Jesus Martinez",1,1
+3,333,"Fabio Pérez",1,2
+4,444,"Luis Carndenas",1,3
+5,999,TienditaBonita,2,2
