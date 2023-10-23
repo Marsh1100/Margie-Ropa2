@@ -23,5 +23,7 @@ public interface IUnitOfWork
     IInventario Inventarios { get; }
     IDetalleVenta DetalleVentas { get; }
 
+    IInsumo Insumos { get; }
+
     Task<int> SaveAsync();
 }

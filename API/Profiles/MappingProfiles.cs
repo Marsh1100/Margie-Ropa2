@@ -47,5 +47,12 @@ public class MappingProfiles : Profile
             .ReverseMap();
         CreateMap<DetalleVenta, DetalleVentaDto>()
             .ReverseMap();
+        CreateMap<Insumo,InsumoDto>()
+            .ReverseMap();
+        
+        CreateMap<InsumoPrenda,InsumoPrendaDto>()
+            .ReverseMap();
+        CreateMap<InsumoProveedor,InsumoProveedorDto>()
+            .ReverseMap();
     }
 }

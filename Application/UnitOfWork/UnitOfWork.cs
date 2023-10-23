@@ -24,10 +24,22 @@ public class UnitOfWork : IUnitOfWork, IDisposable
     private IVenta _venta;
     private IInventario _inventario;
     private IDetalleVenta _detalleventa;
+    private IInsumo _insumos;
 
     public UnitOfWork(ApiDbContext context)
     {
         _context = context;
+    }
+    public IInsumo Insumos
+    {
+         get
+        {
+            if (_insumos == null)
+            {
+                _insumos = new InsumoRepository(_context);
+            }
+            return _insumos;
+        }
     }
     public IDetalleVenta DetalleVentas
     {
