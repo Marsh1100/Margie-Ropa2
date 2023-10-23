@@ -66,4 +66,13 @@ http://localhost:5000/api/Cliente?pageIndex=2&pageSize=1
     ```
     http://localhost:5000/api/Prenda/prendasProteccion
     ```
-    ![image](https://github.com/Marsh1100/Margie-Ropa/assets/131481951/a1ff7fe9-13d1-46a3-9cbc-8e3c2cddc5d1)
+    ![image](https://github.com/Marsh1100/Margie-Ropa/assets/131481951/a1ff7fe9-13d1-46a3-9cbc-8e3c2cddc5d1)<br>
+7.Listar las ventas realizadas por un empleado especifico. El usuario debe ingresar el Id del empleado y mostrar la siguiente información.
+    * Id Empleado
+    * Nombre del empleado
+    * Fecturas : Nro Factura, fecha y total de la factura.<br>
+    ```
+    http://localhost:5000/api/Empleado/ventas/1
+    ```
+    ![image](https://github.com/Marsh1100/Margie-Ropa2/assets/131481951/1aeeb5d3-3877-449d-9f68-970ecbc2573c)
+
