@@ -30,7 +30,6 @@ public class ClienteController : ApiBaseController
     [MapToApiVersion("1.0")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-
     public async Task<ActionResult<IEnumerable<ClienteDto>>> Get()
     {
         var result = await _unitOfWork.Clientes.GetAllAsync();
@@ -98,5 +97,14 @@ public class ClienteController : ApiBaseController
         this._unitOfWork.Clientes.Remove(result);
         await this._unitOfWork.SaveAsync();
         return NoContent();
+    }
+    [HttpGet("ordenes/{idCliente}")]
+    [MapToApiVersion("1.0")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult> GetOrdenes(string idCliente)
+    {
+        var result = await _unitOfWork.Clientes.GetOrdenes(idCliente);
+        return Ok(result);
     }
 }
