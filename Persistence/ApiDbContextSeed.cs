@@ -528,6 +528,63 @@ public class ApiDbContextSeed
                 }
                 
             }
+            if(!context.Insumos.Any())
+            {
+                using (var reader = new StreamReader("../Persistence/Data/Csvs/insumo.csv"))
+                {
+                    using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
+                    {
+                        HeaderValidated = null, // Esto deshabilita la validación de encabezados
+                        MissingFieldFound = null
+                    }))
+                    {
+                        // Resto de tu código para leer y procesar el archivo CSV
+                        var list = csv.GetRecords<Insumo>();
+                        List<Insumo> entidad = new();
+                        foreach (var item in list)
+                        {
+                            entidad.Add(new Insumo
+                            {
+                                Nombre= item.Nombre,
+                                ValorUnit = item.ValorUnit,
+                                StockMin = item.StockMin,
+                                StockMax = item.StockMax,
+                            });
+                        }
+                        context.Insumos.AddRange(entidad);
+                        await context.SaveChangesAsync();
+                    }
+                }
+                
+            }
+
+            if(!context.InsumoProveedores.Any())
+            {
+                using (var reader = new StreamReader("../Persistence/Data/Csvs/insumoProveedor.csv"))
+                {
+                    using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
+                    {
+                        HeaderValidated = null, // Esto deshabilita la validación de encabezados
+                        MissingFieldFound = null
+                    }))
+                    {
+                        // Resto de tu código para leer y procesar el archivo CSV
+                        var list = csv.GetRecords<InsumoProveedor>();
+                        List<InsumoProveedor> entidad = new();
+                        foreach (var item in list)
+                        {
+                            entidad.Add(new InsumoProveedor
+                            {
+                                InsumoId= item.InsumoId,
+                                ProveedorId = item.ProveedorId
+                            });
+                        }
+                        context.InsumoProveedores.AddRange(entidad);
+                        await context.SaveChangesAsync();
+                    }
+                }
+                
+            }
         }catch(Exception ex)
         {
             var logger = loggerFactory.CreateLogger<ApiDbContext>();

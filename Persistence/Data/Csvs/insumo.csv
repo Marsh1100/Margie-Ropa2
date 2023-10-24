@@ -1,0 +1,5 @@
+Id,Nombre,ValorUnit,StockMin,StockMax
+1,"Insumo 1",45000,5,15
+2,"Insumo 2",80000,10,25
+3,"Insumo 3",75000,5,15
+4,"Insumo 4 ",120000,5,10

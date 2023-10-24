@@ -33,4 +33,24 @@ public class InsumoRepository : GenericRepository<Insumo>, IInsumo
         return $"Se ha agregado nuevo insumo {insumoExist.Nombre} al proveedor {proveedorExist.Nombre}.";
 
     }
+
+    public async Task<string> AddInsumoPrenda(int insumoId, int prendaId, int cant)
+    {
+        var prendaExist = await _context.Prendas.Where(p=> p.Id == prendaId).FirstAsync();
+        var insumoExist = await _context.Insumos.Where(p=>p.Id == insumoId).FirstAsync();
+
+        if(prendaExist == null || insumoExist == null)
+        {
+            return "Verifique sí el Id insumo o Id prenda exista en la BD.";
+        }
+        InsumoPrenda newInsumoPrenda = new(){
+            InsumoId = insumoId,
+            PrendaId = prendaId,
+            Cantidad = cant
+        };
+
+        _context.InsumoPrendas.Add(newInsumoPrenda);
+        await _context.SaveChangesAsync();
+        return $"Se ha agregado nuevos insumos del tipo {insumoExist.Nombre} para la fabricación de las prendas {prendaExist.Nombre}.";
+    }
 }
