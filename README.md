@@ -67,6 +67,14 @@ http://localhost:5000/api/Cliente?pageIndex=2&pageSize=1
     http://localhost:5000/api/Prenda/prendasProteccion
     ```
     ![image](https://github.com/Marsh1100/Margie-Ropa/assets/131481951/a1ff7fe9-13d1-46a3-9cbc-8e3c2cddc5d1)<br>
+4. Listar las ordenes de producción que pertenecen a un cliente especifico. El usuario debe ingresar el IdCliente y debe obtener la siguiente información:
+    * IdCliente, Nombre, Municipio donde se encuentra ubicado.
+    * Nro de orden de producción, fecha y el estado de la orden de producción (Se debe mostrar la descripción del estado, código del estado, valor total de la orden de producción.
+    * Detalle de orden: Nombre de la prenda, Código de la prenda, Cantidad, Valor total en pesos y en dólares.
+    ```
+    http://localhost:5000/api/Cliente/ordenes/123
+    ```
+    ![image](https://github.com/Marsh1100/Margie-Ropa2/assets/131481951/1e8bc739-9d88-4029-987a-923ac3f7ee81)<br>
 7.Listar las ventas realizadas por un empleado especifico. El usuario debe ingresar el Id del empleado y mostrar la siguiente información.
     * Id Empleado
     * Nombre del empleado
