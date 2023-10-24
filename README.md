@@ -75,6 +75,13 @@ http://localhost:5000/api/Cliente?pageIndex=2&pageSize=1
     http://localhost:5000/api/Cliente/ordenes/123
     ```
     ![image](https://github.com/Marsh1100/Margie-Ropa2/assets/131481951/1e8bc739-9d88-4029-987a-923ac3f7ee81)<br>
+5. Listar los insumos de una prenda y calcular cuanto cuesta producir una prenda especifica. El costo de la prenda dependerá de la cantidad de insumos que sean necesarios para la producción de la misma. El usuario debe ingresar en Id de la prenda.
+6. Listar los insumos que son vendidos por un determinado proveedor. El usuario debe ingresar el Nit de proveedor.
+   ```
+   http://localhost:5000/api/Proveedor/insumos/111
+   ```
+   ![image](https://github.com/Marsh1100/Margie-Ropa2/assets/131481951/ade36fc2-5a96-49f6-8946-92a8fa8e7d40)
+
 7.Listar las ventas realizadas por un empleado especifico. El usuario debe ingresar el Id del empleado y mostrar la siguiente información.
     * Id Empleado
     * Nombre del empleado
