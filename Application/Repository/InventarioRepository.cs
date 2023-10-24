@@ -21,7 +21,7 @@ public class InventarioRepository : GenericRepository<Inventario>, IInventario
 
         if(prendaExist == null || tallaExist == null)
         {
-            return "Verifique sí el Id inevtario o Id Talla exista en la BD.";
+            return "Verifique sí el Id inventario o Id Talla exista en la BD.";
         }
         InventarioTalla newInvTalla = new(){
             InventarioId = invId,

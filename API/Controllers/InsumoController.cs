@@ -66,7 +66,15 @@ public class InsumoController : ApiBaseController
 
         return CreatedAtAction(nameof(Post), new{id=result.Id}, result);
     }
-
+    [HttpPost("addInsumoProveedor")]
+    [MapToApiVersion("1.0")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult> PostAddTalla([FromBody] InsumoProveedorDto dto)
+    {
+        var result = await _unitOfWork.Insumos.AddInsumoProveedor(dto.InsumoId, dto.ProveedorId) ;
+        return Ok(result);
+    }
 
     [HttpPut()]
     [MapToApiVersion("1.0")]

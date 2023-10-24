@@ -15,7 +15,7 @@ public class InsumoDto
     public int StockMax {get; set; }
    
 }
-public class InsumoPrendaDto
+public class InsumoProveedorDto
 {
     [Required]
     public int InsumoId { get; set; }
@@ -24,7 +24,7 @@ public class InsumoPrendaDto
     public int ProveedorId { get; set; }
 }
 
-public class InsumoProveedorDto
+public class InsumoPrendaDto
 {
     [Required]
     public int InsumoId { get; set; }

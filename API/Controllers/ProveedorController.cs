@@ -108,4 +108,14 @@ public class ProveedorController : ApiBaseController
         var result = await _unitOfWork.Proveedores.GetProveedorNatural();
         return _mapper.Map<List<ProveedorTipoDto>>(result);
     }
+
+    [HttpGet("insumos/{Nit}")]
+    [MapToApiVersion("1.0")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult> GetInsumos(string nit)
+    {
+        var result = await _unitOfWork.Proveedores.GetInsumos(nit);
+        return Ok(result);
+    }
 }

@@ -14,6 +14,25 @@ public class ProveedorRepository : GenericRepository<Proveedor>, IProveedor
        _context = context;
     }
 
+    public async Task<object> GetInsumos(string nit)
+    {
+       var provedor = await _context.Proveedores
+                        .Include(p=>p.Insumos)
+                        .Where(p=> p.NitProveedor == nit)
+                        .Select(s=> new
+                            {
+                                Proveedor = s.Nombre,
+                                NIT = s.NitProveedor,
+                                Insumos = s.Insumos.Select(x=>new
+                                {
+                                    Insumo = x.Nombre,
+                                    ValorUnit = x.ValorUnit
+                                })
+                            }
+                        ).FirstAsync();
+        return provedor;
+    }
+
     public async Task<IEnumerable<Proveedor>> GetProveedorNatural()
     {
         var proveedores = await _context.Proveedores
