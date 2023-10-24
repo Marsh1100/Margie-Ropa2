@@ -26,7 +26,7 @@ public class ProveedorRepository : GenericRepository<Proveedor>, IProveedor
                                 Insumos = s.Insumos.Select(x=>new
                                 {
                                     Insumo = x.Nombre,
-                                    ValorUnit = x.ValorUnit
+                                    x.ValorUnit
                                 })
                             }
                         ).FirstAsync();

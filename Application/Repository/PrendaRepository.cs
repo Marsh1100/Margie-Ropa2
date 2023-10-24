@@ -14,6 +14,30 @@ public class PrendaRepository : GenericRepository<Prenda>, IPrenda
        _context = context;
     }
 
+    public async Task<object> GetInsumos(int idPrenda)
+    {
+        var insumosPrendas = await _context.InsumoPrendas.ToListAsync();
+        var prendas = await _context.Prendas
+                            .Include(x=> x.Insumos)
+                            .ToListAsync();
+        
+        var insumos = (from prenda in prendas
+                        join insumoPrenda in insumosPrendas on prenda.Id equals insumoPrenda.PrendaId
+                        where prenda.Id == idPrenda
+                        select prenda).Distinct()
+                        .Select(j=> new {
+                            j.Id,
+                            Prenda = j.Nombre,
+                            Insumos = j.InsumoPrendas.Select(n=> new{
+                                NombreInsumo = n.Insumo.Nombre,
+                                n.Insumo.ValorUnit,
+                                n.Cantidad
+                            }),
+                            CostoTotal = j.InsumoPrendas.Sum(d=> d.Insumo.ValorUnit * d.Cantidad)
+                        });
+        return insumos;
+    }
+
     public async Task<IEnumerable<object>> GetPrendas()
     {
         var prendas = await _context.Prendas.Include(p=>p.Genero).Include(p=>p.Estado).Include(p=>p.TipoProteccion)
@@ -32,4 +56,6 @@ public class PrendaRepository : GenericRepository<Prenda>, IPrenda
         return prendas;
     
     }
+    
+
 }

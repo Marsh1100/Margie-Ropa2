@@ -70,9 +70,18 @@ public class InsumoController : ApiBaseController
     [MapToApiVersion("1.0")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult> PostAddTalla([FromBody] InsumoProveedorDto dto)
+    public async Task<ActionResult> PostInsumoProveedor([FromBody] InsumoProveedorDto dto)
     {
         var result = await _unitOfWork.Insumos.AddInsumoProveedor(dto.InsumoId, dto.ProveedorId) ;
+        return Ok(result);
+    }
+    [HttpPost("addInsumoPrenda")]
+    [MapToApiVersion("1.0")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult> PostInsumoPrenda([FromBody] InsumoPrendaDto dto)
+    {
+        var result = await _unitOfWork.Insumos.AddInsumoPrenda(dto.InsumoId, dto.PrendaId, dto.Cantidad) ;
         return Ok(result);
     }
 

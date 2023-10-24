@@ -585,6 +585,34 @@ public class ApiDbContextSeed
                 }
                 
             }
+            if(!context.InsumoPrendas.Any())
+            {
+                using (var reader = new StreamReader("../Persistence/Data/Csvs/insumoPrenda.csv"))
+                {
+                    using (var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture)
+                    {
+                        HeaderValidated = null, // Esto deshabilita la validación de encabezados
+                        MissingFieldFound = null
+                    }))
+                    {
+                        // Resto de tu código para leer y procesar el archivo CSV
+                        var list = csv.GetRecords<InsumoPrenda>();
+                        List<InsumoPrenda> entidad = new();
+                        foreach (var item in list)
+                        {
+                            entidad.Add(new InsumoPrenda
+                            {
+                                InsumoId= item.InsumoId,
+                                PrendaId = item.PrendaId,
+                                Cantidad = item.Cantidad
+                            });
+                        }
+                        context.InsumoPrendas.AddRange(entidad);
+                        await context.SaveChangesAsync();
+                    }
+                }
+                
+            }
         }catch(Exception ex)
         {
             var logger = loggerFactory.CreateLogger<ApiDbContext>();

@@ -108,5 +108,15 @@ public class PrendaController : ApiBaseController
         var result = await _unitOfWork.Prendas.GetPrendas();
         return Ok(result);
     }
+
+    [HttpGet("insumos/{idPrenda}")]
+    [MapToApiVersion("1.0")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult> GetInsumos(int idPrenda)
+    {
+        var result = await _unitOfWork.Prendas.GetInsumos(idPrenda);
+        return Ok(result);
+    }
     
 }

@@ -4,5 +4,6 @@ namespace Domain.Interfaces;
 
     public interface IPrenda : IGenericRepository<Prenda> { 
        Task<IEnumerable<object>> GetPrendas(); 
+       Task<object> GetInsumos(int idPrenda);
     }
 
